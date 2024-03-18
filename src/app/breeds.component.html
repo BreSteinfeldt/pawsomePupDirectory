@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="column">
+    <div *ngIf="imageUrl">
+      <img class="dog-img" [src]="imageUrl" alt="Random Dog Image">
+    </div>
+  </div>
+
+  <div class="column">
+    <div *ngFor="let breed of breeds">
+      <button class="button primary" (click)="getRandomImage(breed)">{{ breed }}</button>  
+    </div>
+  </div>
+</div>
+
